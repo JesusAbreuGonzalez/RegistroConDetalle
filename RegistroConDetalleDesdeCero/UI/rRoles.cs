@@ -108,11 +108,11 @@ namespace RegistroConDetalleDesdeCero.UI
         private void GuardarButton_Click(object sender, EventArgs e)
         {
             Roles roles;
-            // bool paso = false;
 
             if (!Validar())
                 return;
             roles = LlenaClase();
+
             var paso = RolesBLL.Guardar(roles);
 
             if (paso)

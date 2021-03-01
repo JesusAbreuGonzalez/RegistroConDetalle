@@ -73,7 +73,7 @@ namespace RegistroConDetalleDesdeCero.BLL
 
             try
             {
-                contexto.Database.ExecuteSqlRaw($"Delete FROM OrdenesDetalle Where RolId = {roles.RolId}");
+                contexto.Database.ExecuteSqlRaw($"DELETE FROM RolesDetalle Where RolId = {roles.RolId}");
                 foreach (var anterior in roles.RolesDetalle)
                 {
                     contexto.Entry(anterior).State = EntityState.Added;
@@ -91,6 +91,7 @@ namespace RegistroConDetalleDesdeCero.BLL
             }
 
             return paso;
+
         }
 
         public static bool Eliminar(int id)

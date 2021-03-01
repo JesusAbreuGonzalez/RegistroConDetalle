@@ -56,6 +56,7 @@ namespace RegistroConDetalleDesdeCero.BLL
             }
 
             return paso;
+
         }
 
         private static bool Insertar(Permisos permisos)
@@ -88,6 +89,7 @@ namespace RegistroConDetalleDesdeCero.BLL
             else
                 return Modificar(permisos);
         }
+
         public static bool Eliminar(int id)
         {
             bool paso = false;
