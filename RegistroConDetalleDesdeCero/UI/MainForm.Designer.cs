@@ -59,6 +59,8 @@ namespace RegistroConDetalleDesdeCero.UI
             this.searchToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripSeparator5 = new System.Windows.Forms.ToolStripSeparator();
             this.aboutToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.ConsultasToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.ConsultaRolesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -69,6 +71,7 @@ namespace RegistroConDetalleDesdeCero.UI
             this.archivoToolStripMenuItem,
             this.editarToolStripMenuItem,
             this.RegistrosToolStripMenuItem,
+            this.ConsultasToolStripMenuItem,
             this.AyudaToolStripMenuItem});
             this.menuStrip.Location = new System.Drawing.Point(0, 0);
             this.menuStrip.Name = "menuStrip";
@@ -292,6 +295,20 @@ namespace RegistroConDetalleDesdeCero.UI
             this.aboutToolStripMenuItem.Size = new System.Drawing.Size(150, 26);
             this.aboutToolStripMenuItem.Text = "&About...";
             // 
+            // ConsultasToolStripMenuItem
+            // 
+            this.ConsultasToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.ConsultaRolesToolStripMenuItem});
+            this.ConsultasToolStripMenuItem.Name = "ConsultasToolStripMenuItem";
+            this.ConsultasToolStripMenuItem.Size = new System.Drawing.Size(86, 24);
+            this.ConsultasToolStripMenuItem.Text = "&Consultas";
+            // 
+            // ConsultaRolesToolStripMenuItem
+            // 
+            this.ConsultaRolesToolStripMenuItem.Name = "ConsultaRolesToolStripMenuItem";
+            this.ConsultaRolesToolStripMenuItem.Size = new System.Drawing.Size(128, 26);
+            this.ConsultaRolesToolStripMenuItem.Text = "Roles";
+            // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
@@ -303,6 +320,7 @@ namespace RegistroConDetalleDesdeCero.UI
             this.MainMenuStrip = this.menuStrip;
             this.Name = "MainForm";
             this.Text = "MainForm";
+            this.Load += new System.EventHandler(this.MainForm_Load);
             this.menuStrip.ResumeLayout(false);
             this.menuStrip.PerformLayout();
             this.ResumeLayout(false);
@@ -341,5 +359,7 @@ namespace RegistroConDetalleDesdeCero.UI
         private System.Windows.Forms.ToolStripMenuItem searchToolStripMenuItem;
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator5;
         private System.Windows.Forms.ToolStripMenuItem aboutToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem ConsultasToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem ConsultaRolesToolStripMenuItem;
     }
 }

@@ -1,4 +1,5 @@
-﻿using System;
+﻿using RegistroConDetalleDesdeCero.UI.Consultas;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -14,6 +15,8 @@ namespace RegistroConDetalleDesdeCero.UI
         {
             InitializeComponent();
             this.rolesToolStripMenuItem.Click += new EventHandler(this.rolesToolStripMenuItem_ItemClicked);
+            
+            
         }
 
         private void rolesToolStripMenuItem_ItemClicked(object sender, EventArgs e)
@@ -24,6 +27,11 @@ namespace RegistroConDetalleDesdeCero.UI
         }
 
         private void menuStrip_ItemClicked(object sender, ToolStripItemClickedEventArgs e)
+        {
+
+        }
+
+        private void MainForm_Load(object sender, EventArgs e)
         {
 
         }
