@@ -36,8 +36,6 @@ namespace RegistroConDetalleDesdeCero.UI
             this.BuscarRolButton = new System.Windows.Forms.Button();
             this.DescripcionLabel = new System.Windows.Forms.Label();
             this.DescripcionTextBox = new System.Windows.Forms.TextBox();
-            this.FechaCreacionLabel = new System.Windows.Forms.Label();
-            this.CreacionDateTimePicker = new System.Windows.Forms.DateTimePicker();
             this.NuevoRolButton = new System.Windows.Forms.Button();
             this.GuardarButton = new System.Windows.Forms.Button();
             this.EliminarButton = new System.Windows.Forms.Button();
@@ -58,7 +56,7 @@ namespace RegistroConDetalleDesdeCero.UI
             // RolLabel
             // 
             this.RolLabel.AutoSize = true;
-            this.RolLabel.Location = new System.Drawing.Point(17, 24);
+            this.RolLabel.Location = new System.Drawing.Point(18, 24);
             this.RolLabel.Name = "RolLabel";
             this.RolLabel.Size = new System.Drawing.Size(50, 20);
             this.RolLabel.TabIndex = 0;
@@ -87,7 +85,7 @@ namespace RegistroConDetalleDesdeCero.UI
             // DescripcionLabel
             // 
             this.DescripcionLabel.AutoSize = true;
-            this.DescripcionLabel.Location = new System.Drawing.Point(16, 66);
+            this.DescripcionLabel.Location = new System.Drawing.Point(17, 69);
             this.DescripcionLabel.Name = "DescripcionLabel";
             this.DescripcionLabel.Size = new System.Drawing.Size(87, 20);
             this.DescripcionLabel.TabIndex = 3;
@@ -95,28 +93,10 @@ namespace RegistroConDetalleDesdeCero.UI
             // 
             // DescripcionTextBox
             // 
-            this.DescripcionTextBox.Location = new System.Drawing.Point(221, 63);
+            this.DescripcionTextBox.Location = new System.Drawing.Point(221, 66);
             this.DescripcionTextBox.Name = "DescripcionTextBox";
             this.DescripcionTextBox.Size = new System.Drawing.Size(178, 27);
             this.DescripcionTextBox.TabIndex = 4;
-            // 
-            // FechaCreacionLabel
-            // 
-            this.FechaCreacionLabel.AutoSize = true;
-            this.FechaCreacionLabel.Location = new System.Drawing.Point(16, 111);
-            this.FechaCreacionLabel.Name = "FechaCreacionLabel";
-            this.FechaCreacionLabel.Size = new System.Drawing.Size(109, 20);
-            this.FechaCreacionLabel.TabIndex = 5;
-            this.FechaCreacionLabel.Text = "Fecha Creación";
-            // 
-            // CreacionDateTimePicker
-            // 
-            this.CreacionDateTimePicker.CustomFormat = "dd/MM/yyyy";
-            this.CreacionDateTimePicker.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.CreacionDateTimePicker.Location = new System.Drawing.Point(221, 106);
-            this.CreacionDateTimePicker.Name = "CreacionDateTimePicker";
-            this.CreacionDateTimePicker.Size = new System.Drawing.Size(178, 27);
-            this.CreacionDateTimePicker.TabIndex = 6;
             // 
             // NuevoRolButton
             // 
@@ -171,9 +151,9 @@ namespace RegistroConDetalleDesdeCero.UI
             this.DetalleGroupBox.Controls.Add(this.EsAsignadoCheckBox);
             this.DetalleGroupBox.Controls.Add(this.PermisoIdComboBox);
             this.DetalleGroupBox.Controls.Add(this.PermisoIdLabel);
-            this.DetalleGroupBox.Location = new System.Drawing.Point(17, 163);
+            this.DetalleGroupBox.Location = new System.Drawing.Point(17, 111);
             this.DetalleGroupBox.Name = "DetalleGroupBox";
-            this.DetalleGroupBox.Size = new System.Drawing.Size(611, 328);
+            this.DetalleGroupBox.Size = new System.Drawing.Size(611, 380);
             this.DetalleGroupBox.TabIndex = 10;
             this.DetalleGroupBox.TabStop = false;
             this.DetalleGroupBox.Text = "Detalle de rol";
@@ -197,7 +177,7 @@ namespace RegistroConDetalleDesdeCero.UI
             this.RemoverButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.RemoverButton.Image = ((System.Drawing.Image)(resources.GetObject("RemoverButton.Image")));
             this.RemoverButton.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.RemoverButton.Location = new System.Drawing.Point(4, 295);
+            this.RemoverButton.Location = new System.Drawing.Point(4, 347);
             this.RemoverButton.Name = "RemoverButton";
             this.RemoverButton.Size = new System.Drawing.Size(92, 28);
             this.RemoverButton.TabIndex = 11;
@@ -216,7 +196,7 @@ namespace RegistroConDetalleDesdeCero.UI
             this.RolesDataGridView.Name = "RolesDataGridView";
             this.RolesDataGridView.RowHeadersWidth = 51;
             this.RolesDataGridView.RowTemplate.Height = 29;
-            this.RolesDataGridView.Size = new System.Drawing.Size(597, 212);
+            this.RolesDataGridView.Size = new System.Drawing.Size(597, 264);
             this.RolesDataGridView.TabIndex = 4;
             // 
             // EsAsignadoCheckBox
@@ -260,8 +240,6 @@ namespace RegistroConDetalleDesdeCero.UI
             this.Controls.Add(this.EliminarButton);
             this.Controls.Add(this.GuardarButton);
             this.Controls.Add(this.NuevoRolButton);
-            this.Controls.Add(this.CreacionDateTimePicker);
-            this.Controls.Add(this.FechaCreacionLabel);
             this.Controls.Add(this.DescripcionTextBox);
             this.Controls.Add(this.DescripcionLabel);
             this.Controls.Add(this.BuscarRolButton);
@@ -288,8 +266,6 @@ namespace RegistroConDetalleDesdeCero.UI
         private System.Windows.Forms.Button BuscarRolButton;
         private System.Windows.Forms.Label DescripcionLabel;
         private System.Windows.Forms.TextBox DescripcionTextBox;
-        private System.Windows.Forms.Label FechaCreacionLabel;
-        private System.Windows.Forms.DateTimePicker CreacionDateTimePicker;
         private System.Windows.Forms.Button NuevoRolButton;
         private System.Windows.Forms.Button GuardarButton;
         private System.Windows.Forms.Button EliminarButton;

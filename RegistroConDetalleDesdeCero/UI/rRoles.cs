@@ -28,7 +28,6 @@ namespace RegistroConDetalleDesdeCero.UI
         private void Limpiar()
         {
             RolIdNumericUpDown.Value = 0;
-            CreacionDateTimePicker.Value = DateTime.Now;
             DescripcionTextBox.Clear();
             RolesDataGridView.DataSource = null;
         }
@@ -54,7 +53,7 @@ namespace RegistroConDetalleDesdeCero.UI
             Roles roles = new Roles();
             roles.RolId = (int)RolIdNumericUpDown.Value;
             roles.Descripcion = DescripcionTextBox.Text;
-            roles.FechaCreacion = CreacionDateTimePicker.Value;
+            roles.FechaCreacion = DateTime.Now;
             roles.RolesDetalle = this.rolDetalle;
             LlenarGrid();
 
@@ -69,15 +68,6 @@ namespace RegistroConDetalleDesdeCero.UI
             LlenarGrid();
         }
 
-
-        private bool ExisteEnBaseDeDatos()
-        {
-            var roles = new Roles();
-            roles = RolesBLL.Buscar((int)RolIdNumericUpDown.Value);
-            return (roles != null);
-        }
-
-
         //Este es el evento del boton Nuevo, sirve para limpiar los campos y errores
 
         private void NuevoRolButton_Click(object sender, EventArgs e)
@@ -88,7 +78,7 @@ namespace RegistroConDetalleDesdeCero.UI
         //Este es el evento del boton Buscar, sirve para buscar los datos correspondientes al id ingresado
         private void BuscarRolButton_Click_1(object sender, EventArgs e)
         {
-            Roles roles = new Roles();
+            var roles = new Roles();
             int id = (int)RolIdNumericUpDown.Value;
 
             Limpiar();
@@ -146,12 +136,12 @@ namespace RegistroConDetalleDesdeCero.UI
                 this.rolDetalle = (List<RolesDetalle>)RolesDataGridView.DataSource;
 
             this.rolDetalle.Add(
-                new RolesDetalle(
-                    id: 0,
-                    rolId: (int)RolIdNumericUpDown.Value,
-                    permisoId: Convert.ToInt32(PermisoIdComboBox.Text),
-                    esAsignado: EsAsignadoCheckBox.Checked)
-                );
+                new RolesDetalle(){
+                    RolDetalleId = 0,
+                    RolId = (int)RolIdNumericUpDown.Value,
+                    PermisoId = Convert.ToInt32(PermisoIdComboBox.Text),
+                    EsAsignado = EsAsignadoCheckBox.Checked
+                });
             LlenarGrid();
             EsAsignadoCheckBox.Checked = false;
         }
