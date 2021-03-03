@@ -120,6 +120,7 @@ namespace RegistroConDetalleDesdeCero.UI
             // 
             // NuevoRolButton
             // 
+            this.NuevoRolButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.NuevoRolButton.Image = ((System.Drawing.Image)(resources.GetObject("NuevoRolButton.Image")));
             this.NuevoRolButton.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
             this.NuevoRolButton.Location = new System.Drawing.Point(18, 509);
@@ -133,9 +134,10 @@ namespace RegistroConDetalleDesdeCero.UI
             // 
             // GuardarButton
             // 
+            this.GuardarButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.GuardarButton.Image = ((System.Drawing.Image)(resources.GetObject("GuardarButton.Image")));
             this.GuardarButton.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.GuardarButton.Location = new System.Drawing.Point(163, 509);
+            this.GuardarButton.Location = new System.Drawing.Point(161, 509);
             this.GuardarButton.Name = "GuardarButton";
             this.GuardarButton.Size = new System.Drawing.Size(90, 53);
             this.GuardarButton.TabIndex = 8;
@@ -146,6 +148,7 @@ namespace RegistroConDetalleDesdeCero.UI
             // 
             // EliminarButton
             // 
+            this.EliminarButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.EliminarButton.Image = ((System.Drawing.Image)(resources.GetObject("EliminarButton.Image")));
             this.EliminarButton.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
             this.EliminarButton.Location = new System.Drawing.Point(309, 509);
@@ -159,6 +162,9 @@ namespace RegistroConDetalleDesdeCero.UI
             // 
             // DetalleGroupBox
             // 
+            this.DetalleGroupBox.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.DetalleGroupBox.Controls.Add(this.AgregarButton);
             this.DetalleGroupBox.Controls.Add(this.RemoverButton);
             this.DetalleGroupBox.Controls.Add(this.RolesDataGridView);
@@ -174,6 +180,7 @@ namespace RegistroConDetalleDesdeCero.UI
             // 
             // AgregarButton
             // 
+            this.AgregarButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.AgregarButton.Image = ((System.Drawing.Image)(resources.GetObject("AgregarButton.Image")));
             this.AgregarButton.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.AgregarButton.Location = new System.Drawing.Point(511, 34);
@@ -187,6 +194,7 @@ namespace RegistroConDetalleDesdeCero.UI
             // 
             // RemoverButton
             // 
+            this.RemoverButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.RemoverButton.Image = ((System.Drawing.Image)(resources.GetObject("RemoverButton.Image")));
             this.RemoverButton.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.RemoverButton.Location = new System.Drawing.Point(4, 295);
@@ -200,12 +208,15 @@ namespace RegistroConDetalleDesdeCero.UI
             // 
             // RolesDataGridView
             // 
+            this.RolesDataGridView.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.RolesDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.RolesDataGridView.Location = new System.Drawing.Point(6, 74);
             this.RolesDataGridView.Name = "RolesDataGridView";
             this.RolesDataGridView.RowHeadersWidth = 51;
             this.RolesDataGridView.RowTemplate.Height = 29;
-            this.RolesDataGridView.Size = new System.Drawing.Size(597, 219);
+            this.RolesDataGridView.Size = new System.Drawing.Size(597, 212);
             this.RolesDataGridView.TabIndex = 4;
             // 
             // EsAsignadoCheckBox
@@ -256,6 +267,7 @@ namespace RegistroConDetalleDesdeCero.UI
             this.Controls.Add(this.BuscarRolButton);
             this.Controls.Add(this.RolIdNumericUpDown);
             this.Controls.Add(this.RolLabel);
+            this.MinimumSize = new System.Drawing.Size(459, 551);
             this.Name = "rRoles";
             this.Text = "rRoles";
             this.Load += new System.EventHandler(this.rRoles_Load_1);

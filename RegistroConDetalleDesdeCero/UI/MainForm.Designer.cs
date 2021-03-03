@@ -53,14 +53,14 @@ namespace RegistroConDetalleDesdeCero.UI
             this.selectAllToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.RegistrosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.rolesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.ConsultasToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.ConsultaRolesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.AyudaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.contentsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.indexToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.searchToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripSeparator5 = new System.Windows.Forms.ToolStripSeparator();
             this.aboutToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.ConsultasToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.ConsultaRolesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -75,7 +75,7 @@ namespace RegistroConDetalleDesdeCero.UI
             this.AyudaToolStripMenuItem});
             this.menuStrip.Location = new System.Drawing.Point(0, 0);
             this.menuStrip.Name = "menuStrip";
-            this.menuStrip.Size = new System.Drawing.Size(886, 28);
+            this.menuStrip.Size = new System.Drawing.Size(902, 28);
             this.menuStrip.TabIndex = 0;
             this.menuStrip.Text = "menuStrip1";
             this.menuStrip.ItemClicked += new System.Windows.Forms.ToolStripItemClickedEventHandler(this.menuStrip_ItemClicked);
@@ -254,6 +254,20 @@ namespace RegistroConDetalleDesdeCero.UI
             this.rolesToolStripMenuItem.Size = new System.Drawing.Size(128, 26);
             this.rolesToolStripMenuItem.Text = "&Roles";
             // 
+            // ConsultasToolStripMenuItem
+            // 
+            this.ConsultasToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.ConsultaRolesToolStripMenuItem});
+            this.ConsultasToolStripMenuItem.Name = "ConsultasToolStripMenuItem";
+            this.ConsultasToolStripMenuItem.Size = new System.Drawing.Size(86, 24);
+            this.ConsultasToolStripMenuItem.Text = "&Consultas";
+            // 
+            // ConsultaRolesToolStripMenuItem
+            // 
+            this.ConsultaRolesToolStripMenuItem.Name = "ConsultaRolesToolStripMenuItem";
+            this.ConsultaRolesToolStripMenuItem.Size = new System.Drawing.Size(128, 26);
+            this.ConsultaRolesToolStripMenuItem.Text = "Roles";
+            // 
             // AyudaToolStripMenuItem
             // 
             this.AyudaToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
@@ -295,26 +309,12 @@ namespace RegistroConDetalleDesdeCero.UI
             this.aboutToolStripMenuItem.Size = new System.Drawing.Size(150, 26);
             this.aboutToolStripMenuItem.Text = "&About...";
             // 
-            // ConsultasToolStripMenuItem
-            // 
-            this.ConsultasToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.ConsultaRolesToolStripMenuItem});
-            this.ConsultasToolStripMenuItem.Name = "ConsultasToolStripMenuItem";
-            this.ConsultasToolStripMenuItem.Size = new System.Drawing.Size(86, 24);
-            this.ConsultasToolStripMenuItem.Text = "&Consultas";
-            // 
-            // ConsultaRolesToolStripMenuItem
-            // 
-            this.ConsultaRolesToolStripMenuItem.Name = "ConsultaRolesToolStripMenuItem";
-            this.ConsultaRolesToolStripMenuItem.Size = new System.Drawing.Size(128, 26);
-            this.ConsultaRolesToolStripMenuItem.Text = "Roles";
-            // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoSize = true;
-            this.ClientSize = new System.Drawing.Size(886, 619);
+            this.ClientSize = new System.Drawing.Size(902, 633);
             this.Controls.Add(this.menuStrip);
             this.IsMdiContainer = true;
             this.MainMenuStrip = this.menuStrip;
