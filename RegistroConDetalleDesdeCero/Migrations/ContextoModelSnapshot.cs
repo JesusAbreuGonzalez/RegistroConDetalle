@@ -100,6 +100,38 @@ namespace RegistroConDetalleDesdeCero.Migrations
                     b.ToTable("RolesDetalle");
                 });
 
+            modelBuilder.Entity("RegistroConDetalleDesdeCero.Entidades.Usuarios", b =>
+                {
+                    b.Property<int>("UsuarioId")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("INTEGER");
+
+                    b.Property<bool>("Activo")
+                        .HasColumnType("INTEGER");
+
+                    b.Property<string>("Alias")
+                        .HasColumnType("TEXT");
+
+                    b.Property<string>("Clave")
+                        .HasColumnType("TEXT");
+
+                    b.Property<string>("Email")
+                        .HasColumnType("TEXT");
+
+                    b.Property<DateTime>("FechaIngreso")
+                        .HasColumnType("TEXT");
+
+                    b.Property<string>("Nombres")
+                        .HasColumnType("TEXT");
+
+                    b.Property<int>("RolId")
+                        .HasColumnType("INTEGER");
+
+                    b.HasKey("UsuarioId");
+
+                    b.ToTable("Usuarios");
+                });
+
             modelBuilder.Entity("RegistroConDetalleDesdeCero.Entidades.RolesDetalle", b =>
                 {
                     b.HasOne("RegistroConDetalleDesdeCero.Entidades.Permisos", null)

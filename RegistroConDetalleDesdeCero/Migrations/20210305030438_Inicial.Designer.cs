@@ -9,7 +9,7 @@ using RegistroConDetalleDesdeCero.DAL;
 namespace RegistroConDetalleDesdeCero.Migrations
 {
     [DbContext(typeof(Contexto))]
-    [Migration("20210302012701_Inicial")]
+    [Migration("20210305030438_Inicial")]
     partial class Inicial
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -100,6 +100,38 @@ namespace RegistroConDetalleDesdeCero.Migrations
                     b.HasIndex("RolId");
 
                     b.ToTable("RolesDetalle");
+                });
+
+            modelBuilder.Entity("RegistroConDetalleDesdeCero.Entidades.Usuarios", b =>
+                {
+                    b.Property<int>("UsuarioId")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("INTEGER");
+
+                    b.Property<bool>("Activo")
+                        .HasColumnType("INTEGER");
+
+                    b.Property<string>("Alias")
+                        .HasColumnType("TEXT");
+
+                    b.Property<string>("Clave")
+                        .HasColumnType("TEXT");
+
+                    b.Property<string>("Email")
+                        .HasColumnType("TEXT");
+
+                    b.Property<DateTime>("FechaIngreso")
+                        .HasColumnType("TEXT");
+
+                    b.Property<string>("Nombres")
+                        .HasColumnType("TEXT");
+
+                    b.Property<int>("RolId")
+                        .HasColumnType("INTEGER");
+
+                    b.HasKey("UsuarioId");
+
+                    b.ToTable("Usuarios");
                 });
 
             modelBuilder.Entity("RegistroConDetalleDesdeCero.Entidades.RolesDetalle", b =>

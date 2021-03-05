@@ -17,7 +17,6 @@ namespace RegistroConDetalleDesdeCero.Entidades
         {
             RolId = 0;
             FechaCreacion = DateTime.Now;
-
             RolesDetalle = new List<RolesDetalle>();
         }
 

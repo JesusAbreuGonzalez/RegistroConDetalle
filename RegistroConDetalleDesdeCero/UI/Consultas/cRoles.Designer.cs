@@ -41,10 +41,10 @@ namespace RegistroConDetalleDesdeCero.UI.Consultas
             this.ActivosRadioButton = new System.Windows.Forms.RadioButton();
             this.TodosRadioButton = new System.Windows.Forms.RadioButton();
             this.FechaGroupBox = new System.Windows.Forms.GroupBox();
-            this.DesdeLabel = new System.Windows.Forms.Label();
-            this.DesdeDateTimePicker = new System.Windows.Forms.DateTimePicker();
-            this.HastaDateTimePicker = new System.Windows.Forms.DateTimePicker();
             this.HastaLabel = new System.Windows.Forms.Label();
+            this.HastaDateTimePicker = new System.Windows.Forms.DateTimePicker();
+            this.DesdeDateTimePicker = new System.Windows.Forms.DateTimePicker();
+            this.DesdeLabel = new System.Windows.Forms.Label();
             this.CriterioTextBox = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.RolesConsultaDataGridView)).BeginInit();
             this.esActivoGroupBox.SuspendLayout();
@@ -74,6 +74,9 @@ namespace RegistroConDetalleDesdeCero.UI.Consultas
             // 
             this.FiltroComboBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.FiltroComboBox.FormattingEnabled = true;
+            this.FiltroComboBox.Items.AddRange(new object[] {
+            "Rol Id",
+            "Descripción"});
             this.FiltroComboBox.Location = new System.Drawing.Point(61, 63);
             this.FiltroComboBox.Name = "FiltroComboBox";
             this.FiltroComboBox.Size = new System.Drawing.Size(118, 28);
@@ -117,6 +120,7 @@ namespace RegistroConDetalleDesdeCero.UI.Consultas
             this.BuscarButton.Text = "Buscar";
             this.BuscarButton.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
             this.BuscarButton.UseVisualStyleBackColor = true;
+            this.BuscarButton.Click += new System.EventHandler(this.BuscarButton_Click);
             // 
             // esActivoGroupBox
             // 
@@ -177,23 +181,14 @@ namespace RegistroConDetalleDesdeCero.UI.Consultas
             this.FechaGroupBox.TabIndex = 7;
             this.FechaGroupBox.TabStop = false;
             // 
-            // DesdeLabel
+            // HastaLabel
             // 
-            this.DesdeLabel.AutoSize = true;
-            this.DesdeLabel.Location = new System.Drawing.Point(6, 20);
-            this.DesdeLabel.Name = "DesdeLabel";
-            this.DesdeLabel.Size = new System.Drawing.Size(51, 20);
-            this.DesdeLabel.TabIndex = 0;
-            this.DesdeLabel.Text = "Desde";
-            // 
-            // DesdeDateTimePicker
-            // 
-            this.DesdeDateTimePicker.CustomFormat = "dd/MM/yyyy";
-            this.DesdeDateTimePicker.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.DesdeDateTimePicker.Location = new System.Drawing.Point(63, 17);
-            this.DesdeDateTimePicker.Name = "DesdeDateTimePicker";
-            this.DesdeDateTimePicker.Size = new System.Drawing.Size(125, 27);
-            this.DesdeDateTimePicker.TabIndex = 1;
+            this.HastaLabel.AutoSize = true;
+            this.HastaLabel.Location = new System.Drawing.Point(230, 20);
+            this.HastaLabel.Name = "HastaLabel";
+            this.HastaLabel.Size = new System.Drawing.Size(47, 20);
+            this.HastaLabel.TabIndex = 3;
+            this.HastaLabel.Text = "Hasta";
             // 
             // HastaDateTimePicker
             // 
@@ -204,14 +199,23 @@ namespace RegistroConDetalleDesdeCero.UI.Consultas
             this.HastaDateTimePicker.Size = new System.Drawing.Size(125, 27);
             this.HastaDateTimePicker.TabIndex = 2;
             // 
-            // HastaLabel
+            // DesdeDateTimePicker
             // 
-            this.HastaLabel.AutoSize = true;
-            this.HastaLabel.Location = new System.Drawing.Point(230, 20);
-            this.HastaLabel.Name = "HastaLabel";
-            this.HastaLabel.Size = new System.Drawing.Size(47, 20);
-            this.HastaLabel.TabIndex = 3;
-            this.HastaLabel.Text = "Hasta";
+            this.DesdeDateTimePicker.CustomFormat = "dd/MM/yyyy";
+            this.DesdeDateTimePicker.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
+            this.DesdeDateTimePicker.Location = new System.Drawing.Point(63, 17);
+            this.DesdeDateTimePicker.Name = "DesdeDateTimePicker";
+            this.DesdeDateTimePicker.Size = new System.Drawing.Size(125, 27);
+            this.DesdeDateTimePicker.TabIndex = 1;
+            // 
+            // DesdeLabel
+            // 
+            this.DesdeLabel.AutoSize = true;
+            this.DesdeLabel.Location = new System.Drawing.Point(6, 20);
+            this.DesdeLabel.Name = "DesdeLabel";
+            this.DesdeLabel.Size = new System.Drawing.Size(51, 20);
+            this.DesdeLabel.TabIndex = 0;
+            this.DesdeLabel.Text = "Desde";
             // 
             // CriterioTextBox
             // 
