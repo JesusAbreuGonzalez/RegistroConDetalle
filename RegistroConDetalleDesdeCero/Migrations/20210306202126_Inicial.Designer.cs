@@ -9,7 +9,7 @@ using RegistroConDetalleDesdeCero.DAL;
 namespace RegistroConDetalleDesdeCero.Migrations
 {
     [DbContext(typeof(Contexto))]
-    [Migration("20210305030438_Inicial")]
+    [Migration("20210306202126_Inicial")]
     partial class Inicial
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -72,6 +72,9 @@ namespace RegistroConDetalleDesdeCero.Migrations
 
                     b.Property<DateTime>("FechaCreacion")
                         .HasColumnType("TEXT");
+
+                    b.Property<bool>("esActivo")
+                        .HasColumnType("INTEGER");
 
                     b.HasKey("RolId");
 

@@ -71,6 +71,9 @@ namespace RegistroConDetalleDesdeCero.Migrations
                     b.Property<DateTime>("FechaCreacion")
                         .HasColumnType("TEXT");
 
+                    b.Property<bool>("esActivo")
+                        .HasColumnType("INTEGER");
+
                     b.HasKey("RolId");
 
                     b.ToTable("Roles");

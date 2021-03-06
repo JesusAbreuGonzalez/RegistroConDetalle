@@ -34,26 +34,91 @@ namespace RegistroConDetalleDesdeCero.UI.Consultas
         private void BuscarButton_Click(object sender, EventArgs e)
         {
             var lista = new List<Roles>();
-
-            //si CriterioTextBox se encuentra vacio
-            if (!String.IsNullOrWhiteSpace(CriterioTextBox.Text))
+            
+            //Si FiltroActivo se encuentra cortejado
+            if (FiltroActivoCheckBox.Checked)
             {
-                switch (FiltroComboBox.SelectedIndex)
+                //Si TodosRadioButton se encuentra seleccionado
+                if (TodosRadioButton.Checked)
                 {
-                    case 0: //RolId
-                        lista = RolesBLL.GetList(r => r.RolId == Utilitarios.ToInt(CriterioTextBox.Text));
-                        break;
-                    case 1: //Descripcion
-                        lista = RolesBLL.GetList(r => r.Descripcion.Contains(CriterioTextBox.Text));
-                        break;
-                    default:
-                        break;
+                    //si CriterioTextBox no se encuentra vacio
+                    if (!String.IsNullOrWhiteSpace(CriterioTextBox.Text))
+                    {
+                        switch (FiltroComboBox.SelectedIndex)
+                        {
+                            case 0: //RolId
+                                lista = RolesBLL.GetList(r => r.RolId == Utilitarios.ToInt(CriterioTextBox.Text));
+                                break;
+                            case 1: //Descripcion
+                                lista = RolesBLL.GetList(r => r.Descripcion.Contains(CriterioTextBox.Text));
+                                break;
+                            default:
+                                break;
+                        }
+                    }
+                    else
+                        lista = RolesBLL.GetList(r => true);
                 }
-                
+                //Si ActivosRadioButton se encuentra seleccionado
+                else if (ActivosRadioButton.Checked)
+                {
+                    if (!String.IsNullOrWhiteSpace(CriterioTextBox.Text))
+                    {
+                        switch (FiltroComboBox.SelectedIndex)
+                        {
+                            case 0: //RolId
+                                lista = RolesBLL.GetList(r => r.RolId == Utilitarios.ToInt(CriterioTextBox.Text) && r.esActivo);
+                                break;
+                            case 1: //Descripcion
+                                lista = RolesBLL.GetList(r => r.Descripcion.Contains(CriterioTextBox.Text.ToUpper()) && r.esActivo || r.Descripcion.Contains(CriterioTextBox.Text.ToLower()) && r.esActivo);
+                                break;
+                            default:
+                                break;
+                        }
+                    }
+                    else
+                        lista = RolesBLL.GetList(r => r.esActivo);
+                }
+                //Si InactivosRadioButton se encuentra seleccionado
+                else if (InactivosRadioButton.Checked)
+                {
+                    if (!String.IsNullOrWhiteSpace(CriterioTextBox.Text))
+                    {
+                        switch (FiltroComboBox.SelectedIndex)
+                        {
+                            case 0: //RolId
+                                lista = RolesBLL.GetList(r => r.RolId == Utilitarios.ToInt(CriterioTextBox.Text) && !r.esActivo);
+                                break;
+                            case 1: //Descripcion
+                                lista = RolesBLL.GetList(r => r.Descripcion.Contains(CriterioTextBox.Text.ToUpper()) && !r.esActivo || r.Descripcion.Contains(CriterioTextBox.Text.ToLower()) && !r.esActivo);
+                                break;
+                            default:
+                                break;
+                        }
+                    }
+                    else
+                        lista = RolesBLL.GetList(r => !r.esActivo);
+                }
             }
             else
             {
-                lista = RolesBLL.GetList(r => true);
+                //si CriterioTextBox no se encuentra vacio y FiltroActivo no se encuentra cortejado
+                if (!String.IsNullOrWhiteSpace(CriterioTextBox.Text))
+                {
+                    switch (FiltroComboBox.SelectedIndex)
+                    {
+                        case 0: //RolId
+                            lista = RolesBLL.GetList(r => r.RolId == Utilitarios.ToInt(CriterioTextBox.Text));
+                            break;
+                        case 1: //Descripcion
+                            lista = RolesBLL.GetList(r => r.Descripcion.Contains(CriterioTextBox.Text));
+                            break;
+                        default:
+                            break;
+                    }
+                }
+                else
+                    lista = RolesBLL.GetList(r => true);
             }
 
             //Si usarFecha se encuentra cortejado
@@ -62,15 +127,20 @@ namespace RegistroConDetalleDesdeCero.UI.Consultas
                 lista = RolesBLL.GetList(l => l.FechaCreacion >= DesdeDateTimePicker.Value && l.FechaCreacion <= HastaDateTimePicker.Value);
             }
 
-
-            //Si algun radioButton se encuentra seleccionado
-            /*   if (TodosRadioButton.Checked)
-               {
-
-               }*/
-           // lista = RolesBLL.GetList(l => );
             RolesConsultaDataGridView.DataSource = null;
             RolesConsultaDataGridView.DataSource = lista;
+        }
+
+        private void FiltroActivoCheckBox_CheckedChanged(object sender, EventArgs e)
+        {
+            if (FiltroActivoCheckBox.Checked)
+            {
+                esActivoGroupBox.Enabled = true;
+            }
+            else
+            {
+                esActivoGroupBox.Enabled = false;
+            }
         }
     }
 }

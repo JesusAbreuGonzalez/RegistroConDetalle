@@ -47,6 +47,7 @@ namespace RegistroConDetalleDesdeCero.UI
             this.PermisoIdComboBox = new System.Windows.Forms.ComboBox();
             this.PermisoIdLabel = new System.Windows.Forms.Label();
             this.RolErrorProvider = new System.Windows.Forms.ErrorProvider(this.components);
+            this.ActivoCheckBox = new System.Windows.Forms.CheckBox();
             ((System.ComponentModel.ISupportInitialize)(this.RolIdNumericUpDown)).BeginInit();
             this.DetalleGroupBox.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.RolesDataGridView)).BeginInit();
@@ -56,7 +57,7 @@ namespace RegistroConDetalleDesdeCero.UI
             // RolLabel
             // 
             this.RolLabel.AutoSize = true;
-            this.RolLabel.Location = new System.Drawing.Point(18, 24);
+            this.RolLabel.Location = new System.Drawing.Point(19, 22);
             this.RolLabel.Name = "RolLabel";
             this.RolLabel.Size = new System.Drawing.Size(50, 20);
             this.RolLabel.TabIndex = 0;
@@ -64,7 +65,7 @@ namespace RegistroConDetalleDesdeCero.UI
             // 
             // RolIdNumericUpDown
             // 
-            this.RolIdNumericUpDown.Location = new System.Drawing.Point(221, 22);
+            this.RolIdNumericUpDown.Location = new System.Drawing.Point(222, 20);
             this.RolIdNumericUpDown.Name = "RolIdNumericUpDown";
             this.RolIdNumericUpDown.Size = new System.Drawing.Size(76, 27);
             this.RolIdNumericUpDown.TabIndex = 1;
@@ -73,7 +74,7 @@ namespace RegistroConDetalleDesdeCero.UI
             // 
             this.BuscarRolButton.Image = ((System.Drawing.Image)(resources.GetObject("BuscarRolButton.Image")));
             this.BuscarRolButton.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.BuscarRolButton.Location = new System.Drawing.Point(307, 21);
+            this.BuscarRolButton.Location = new System.Drawing.Point(308, 19);
             this.BuscarRolButton.Name = "BuscarRolButton";
             this.BuscarRolButton.Size = new System.Drawing.Size(92, 28);
             this.BuscarRolButton.TabIndex = 2;
@@ -85,7 +86,7 @@ namespace RegistroConDetalleDesdeCero.UI
             // DescripcionLabel
             // 
             this.DescripcionLabel.AutoSize = true;
-            this.DescripcionLabel.Location = new System.Drawing.Point(17, 69);
+            this.DescripcionLabel.Location = new System.Drawing.Point(18, 67);
             this.DescripcionLabel.Name = "DescripcionLabel";
             this.DescripcionLabel.Size = new System.Drawing.Size(87, 20);
             this.DescripcionLabel.TabIndex = 3;
@@ -93,7 +94,7 @@ namespace RegistroConDetalleDesdeCero.UI
             // 
             // DescripcionTextBox
             // 
-            this.DescripcionTextBox.Location = new System.Drawing.Point(221, 66);
+            this.DescripcionTextBox.Location = new System.Drawing.Point(222, 64);
             this.DescripcionTextBox.Name = "DescripcionTextBox";
             this.DescripcionTextBox.Size = new System.Drawing.Size(178, 27);
             this.DescripcionTextBox.TabIndex = 4;
@@ -231,11 +232,22 @@ namespace RegistroConDetalleDesdeCero.UI
             // 
             this.RolErrorProvider.ContainerControl = this;
             // 
+            // ActivoCheckBox
+            // 
+            this.ActivoCheckBox.AutoSize = true;
+            this.ActivoCheckBox.Location = new System.Drawing.Point(519, 19);
+            this.ActivoCheckBox.Name = "ActivoCheckBox";
+            this.ActivoCheckBox.Size = new System.Drawing.Size(87, 24);
+            this.ActivoCheckBox.TabIndex = 11;
+            this.ActivoCheckBox.Text = "esActivo";
+            this.ActivoCheckBox.UseVisualStyleBackColor = true;
+            // 
             // rRoles
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(646, 578);
+            this.Controls.Add(this.ActivoCheckBox);
             this.Controls.Add(this.DetalleGroupBox);
             this.Controls.Add(this.EliminarButton);
             this.Controls.Add(this.GuardarButton);
@@ -277,5 +289,6 @@ namespace RegistroConDetalleDesdeCero.UI
         private System.Windows.Forms.ComboBox PermisoIdComboBox;
         private System.Windows.Forms.Label PermisoIdLabel;
         private System.Windows.Forms.ErrorProvider RolErrorProvider;
+        private System.Windows.Forms.CheckBox ActivoCheckBox;
     }
 }

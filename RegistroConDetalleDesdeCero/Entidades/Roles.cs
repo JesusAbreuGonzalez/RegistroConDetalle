@@ -12,12 +12,14 @@ namespace RegistroConDetalleDesdeCero.Entidades
         public int RolId { get; set; }
         public DateTime FechaCreacion { get; set; }
         public string Descripcion { get; set; }
+        public bool esActivo { get; set; }
 
         public Roles()
         {
             RolId = 0;
             FechaCreacion = DateTime.Now;
             RolesDetalle = new List<RolesDetalle>();
+            esActivo = false;
         }
 
         [ForeignKey("RolId")]

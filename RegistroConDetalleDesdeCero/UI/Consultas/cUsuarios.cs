@@ -23,13 +23,6 @@ namespace RegistroConDetalleDesdeCero.UI.Consultas
         {
             var lista = new List<Usuarios>();
             
-            //Si usarFecha se encuentra cortejado
-            if (FiltroFechaCheckBox.Checked)
-            {
-                lista = UsuariosBLL.GetList(l => l.FechaIngreso >= DesdeDateTimePicker.Value && l.FechaIngreso <= HastaDateTimePicker.Value);
-            }
-
-
             //Si algun radioButton se encuentra seleccionado
             if(FiltroActivoCheckBox.Checked)
             {
@@ -142,7 +135,15 @@ namespace RegistroConDetalleDesdeCero.UI.Consultas
                 {
                     lista = UsuariosBLL.GetList(r => true);
                 }
-            }           
+            }
+
+
+            //Si usarFecha se encuentra cortejado
+            if (FiltroFechaCheckBox.Checked)
+            {
+                lista = UsuariosBLL.GetList(l => l.FechaIngreso >= DesdeDateTimePicker.Value && l.FechaIngreso <= HastaDateTimePicker.Value);
+            }
+
 
             UsuariosConsultaDataGridView.DataSource = null;
             UsuariosConsultaDataGridView.DataSource = lista;

@@ -64,6 +64,7 @@ namespace RegistroConDetalleDesdeCero.UI
             roles.Descripcion = DescripcionTextBox.Text;
             roles.FechaCreacion = DateTime.Now;
             roles.RolesDetalle = this.rolDetalle;
+            roles.esActivo = ActivoCheckBox.Checked;
             LlenarGrid();
 
             return roles;
@@ -74,6 +75,7 @@ namespace RegistroConDetalleDesdeCero.UI
             RolIdNumericUpDown.Value = roles.RolId;
             DescripcionTextBox.Text = roles.Descripcion;
             this.rolDetalle = roles.RolesDetalle;
+            ActivoCheckBox.Checked = roles.esActivo;
             LlenarGrid();
         }
 

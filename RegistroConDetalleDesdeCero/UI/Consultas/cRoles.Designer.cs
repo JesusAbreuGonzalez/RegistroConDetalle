@@ -46,6 +46,7 @@ namespace RegistroConDetalleDesdeCero.UI.Consultas
             this.DesdeDateTimePicker = new System.Windows.Forms.DateTimePicker();
             this.DesdeLabel = new System.Windows.Forms.Label();
             this.CriterioTextBox = new System.Windows.Forms.TextBox();
+            this.FiltroActivoCheckBox = new System.Windows.Forms.CheckBox();
             ((System.ComponentModel.ISupportInitialize)(this.RolesConsultaDataGridView)).BeginInit();
             this.esActivoGroupBox.SuspendLayout();
             this.FechaGroupBox.SuspendLayout();
@@ -54,7 +55,7 @@ namespace RegistroConDetalleDesdeCero.UI.Consultas
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(12, 66);
+            this.label1.Location = new System.Drawing.Point(12, 71);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(43, 20);
             this.label1.TabIndex = 0;
@@ -63,7 +64,7 @@ namespace RegistroConDetalleDesdeCero.UI.Consultas
             // FiltroFechaCheckBox
             // 
             this.FiltroFechaCheckBox.AutoSize = true;
-            this.FiltroFechaCheckBox.Location = new System.Drawing.Point(12, 23);
+            this.FiltroFechaCheckBox.Location = new System.Drawing.Point(12, 12);
             this.FiltroFechaCheckBox.Name = "FiltroFechaCheckBox";
             this.FiltroFechaCheckBox.Size = new System.Drawing.Size(167, 24);
             this.FiltroFechaCheckBox.TabIndex = 1;
@@ -77,7 +78,7 @@ namespace RegistroConDetalleDesdeCero.UI.Consultas
             this.FiltroComboBox.Items.AddRange(new object[] {
             "Rol Id",
             "Descripción"});
-            this.FiltroComboBox.Location = new System.Drawing.Point(61, 63);
+            this.FiltroComboBox.Location = new System.Drawing.Point(61, 68);
             this.FiltroComboBox.Name = "FiltroComboBox";
             this.FiltroComboBox.Size = new System.Drawing.Size(118, 28);
             this.FiltroComboBox.TabIndex = 2;
@@ -128,6 +129,7 @@ namespace RegistroConDetalleDesdeCero.UI.Consultas
             this.esActivoGroupBox.Controls.Add(this.InactivosRadioButton);
             this.esActivoGroupBox.Controls.Add(this.ActivosRadioButton);
             this.esActivoGroupBox.Controls.Add(this.TodosRadioButton);
+            this.esActivoGroupBox.Enabled = false;
             this.esActivoGroupBox.Location = new System.Drawing.Point(644, 12);
             this.esActivoGroupBox.Name = "esActivoGroupBox";
             this.esActivoGroupBox.Size = new System.Drawing.Size(124, 97);
@@ -224,11 +226,23 @@ namespace RegistroConDetalleDesdeCero.UI.Consultas
             this.CriterioTextBox.Size = new System.Drawing.Size(418, 27);
             this.CriterioTextBox.TabIndex = 8;
             // 
+            // FiltroActivoCheckBox
+            // 
+            this.FiltroActivoCheckBox.AutoSize = true;
+            this.FiltroActivoCheckBox.Location = new System.Drawing.Point(12, 38);
+            this.FiltroActivoCheckBox.Name = "FiltroActivoCheckBox";
+            this.FiltroActivoCheckBox.Size = new System.Drawing.Size(160, 24);
+            this.FiltroActivoCheckBox.TabIndex = 19;
+            this.FiltroActivoCheckBox.Text = "Usar Filtro es activo";
+            this.FiltroActivoCheckBox.UseVisualStyleBackColor = true;
+            this.FiltroActivoCheckBox.CheckedChanged += new System.EventHandler(this.FiltroActivoCheckBox_CheckedChanged);
+            // 
             // cRoles
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(886, 619);
+            this.Controls.Add(this.FiltroActivoCheckBox);
             this.Controls.Add(this.CriterioTextBox);
             this.Controls.Add(this.FechaGroupBox);
             this.Controls.Add(this.esActivoGroupBox);
@@ -270,5 +284,6 @@ namespace RegistroConDetalleDesdeCero.UI.Consultas
         private System.Windows.Forms.DateTimePicker DesdeDateTimePicker;
         private System.Windows.Forms.Label DesdeLabel;
         private System.Windows.Forms.TextBox CriterioTextBox;
+        private System.Windows.Forms.CheckBox FiltroActivoCheckBox;
     }
 }
