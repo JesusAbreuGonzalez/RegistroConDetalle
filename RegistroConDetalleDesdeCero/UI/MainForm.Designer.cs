@@ -61,6 +61,7 @@ namespace RegistroConDetalleDesdeCero.UI
             this.searchToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripSeparator5 = new System.Windows.Forms.ToolStripSeparator();
             this.aboutToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.UsuariosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -243,7 +244,8 @@ namespace RegistroConDetalleDesdeCero.UI
             // RegistrosToolStripMenuItem
             // 
             this.RegistrosToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.rolesToolStripMenuItem});
+            this.rolesToolStripMenuItem,
+            this.UsuariosToolStripMenuItem});
             this.RegistrosToolStripMenuItem.Name = "RegistrosToolStripMenuItem";
             this.RegistrosToolStripMenuItem.Size = new System.Drawing.Size(84, 24);
             this.RegistrosToolStripMenuItem.Text = "&Registros";
@@ -251,7 +253,7 @@ namespace RegistroConDetalleDesdeCero.UI
             // rolesToolStripMenuItem
             // 
             this.rolesToolStripMenuItem.Name = "rolesToolStripMenuItem";
-            this.rolesToolStripMenuItem.Size = new System.Drawing.Size(128, 26);
+            this.rolesToolStripMenuItem.Size = new System.Drawing.Size(148, 26);
             this.rolesToolStripMenuItem.Text = "&Roles";
             // 
             // ConsultasToolStripMenuItem
@@ -309,6 +311,12 @@ namespace RegistroConDetalleDesdeCero.UI
             this.aboutToolStripMenuItem.Size = new System.Drawing.Size(150, 26);
             this.aboutToolStripMenuItem.Text = "&About...";
             // 
+            // UsuariosToolStripMenuItem
+            // 
+            this.UsuariosToolStripMenuItem.Name = "UsuariosToolStripMenuItem";
+            this.UsuariosToolStripMenuItem.Size = new System.Drawing.Size(148, 26);
+            this.UsuariosToolStripMenuItem.Text = "Usuarios";
+            // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
@@ -361,5 +369,6 @@ namespace RegistroConDetalleDesdeCero.UI
         private System.Windows.Forms.ToolStripMenuItem aboutToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem ConsultasToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem ConsultaRolesToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem UsuariosToolStripMenuItem;
     }
 }

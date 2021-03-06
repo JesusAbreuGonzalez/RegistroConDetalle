@@ -12,7 +12,8 @@ namespace RegistroConDetalleDesdeCero.UI
 {
     public partial class rRoles : Form
     {
-        public List<RolesDetalle> rolDetalle { get; set; }
+        public List<RolesDetalle> rolDetalle { get; set; } //Almacena la lista del detalle
+        public List<RolesDetalle> detalle { get; set; } //Muestra el detalle agregado en el boton agregar
         public rRoles()
         {
             InitializeComponent();
@@ -25,10 +26,18 @@ namespace RegistroConDetalleDesdeCero.UI
             RolesDataGridView.DataSource = rolDetalle;
         }
 
+        private void AgregarFila()
+        {
+            RolesDataGridView.DataSource = null;
+            RolesDataGridView.DataSource = detalle;
+        }
+
         private void Limpiar()
         {
             RolIdNumericUpDown.Value = 0;
             DescripcionTextBox.Clear();
+            if(detalle != null)
+                detalle.Clear();
             RolesDataGridView.DataSource = null;
         }
 
@@ -132,17 +141,19 @@ namespace RegistroConDetalleDesdeCero.UI
 
         private void AgregarButton_Click_1(object sender, EventArgs e)
         {
+            
             if (RolesDataGridView.DataSource != null)
                 this.rolDetalle = (List<RolesDetalle>)RolesDataGridView.DataSource;
 
             this.rolDetalle.Add(
                 new RolesDetalle(){
-                    RolDetalleId = 0,
                     RolId = (int)RolIdNumericUpDown.Value,
                     PermisoId = Convert.ToInt32(PermisoIdComboBox.Text),
                     EsAsignado = EsAsignadoCheckBox.Checked
                 });
-            LlenarGrid();
+
+            detalle = rolDetalle;
+            AgregarFila();
             EsAsignadoCheckBox.Checked = false;
         }
 

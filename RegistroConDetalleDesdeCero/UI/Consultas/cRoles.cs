@@ -68,7 +68,7 @@ namespace RegistroConDetalleDesdeCero.UI.Consultas
                {
 
                }*/
-            lista = RolesBLL.GetList(l => );
+           // lista = RolesBLL.GetList(l => );
             RolesConsultaDataGridView.DataSource = null;
             RolesConsultaDataGridView.DataSource = lista;
         }

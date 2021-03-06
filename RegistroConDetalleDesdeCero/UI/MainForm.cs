@@ -14,9 +14,18 @@ namespace RegistroConDetalleDesdeCero.UI
         public MainForm()
         {
             InitializeComponent();
+            //Registros
             this.rolesToolStripMenuItem.Click += new EventHandler(this.rolesToolStripMenuItem_ItemClicked);
+            this.UsuariosToolStripMenuItem.Click += new EventHandler(this.UsuariosToolStripMenuItem_ItemClicked);
             this.ConsultaRolesToolStripMenuItem.Click += new EventHandler(this.ConsultaRolesToolStripMenuItem_ItemClicked);
             
+        }
+
+        private void UsuariosToolStripMenuItem_ItemClicked(object sender, EventArgs e)
+        {
+            var Usuarios = new rUsuarios();
+            Usuarios.MdiParent = this;
+            Usuarios.Show();
         }
 
         private void ConsultaRolesToolStripMenuItem_ItemClicked(object sender, EventArgs e)
