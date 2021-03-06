@@ -240,7 +240,7 @@ namespace RegistroConDetalleDesdeCero.UI.Consultas
             this.Controls.Add(this.label1);
             this.MinimumSize = new System.Drawing.Size(904, 350);
             this.Name = "cRoles";
-            this.Text = "cRoles";
+            this.Text = "Consulta de Roles";
             this.Load += new System.EventHandler(this.cRoles_Load);
             ((System.ComponentModel.ISupportInitialize)(this.RolesConsultaDataGridView)).EndInit();
             this.esActivoGroupBox.ResumeLayout(false);

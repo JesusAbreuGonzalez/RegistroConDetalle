@@ -38,13 +38,11 @@ namespace RegistroConDetalleDesdeCero
             this.ConfirmarLabel = new System.Windows.Forms.Label();
             this.RolLabel = new System.Windows.Forms.Label();
             this.emailLabel = new System.Windows.Forms.Label();
-            this.fechaIngresoLabel = new System.Windows.Forms.Label();
             this.emailTextBox = new System.Windows.Forms.TextBox();
             this.aliasTextBox = new System.Windows.Forms.TextBox();
             this.nombresTextBox = new System.Windows.Forms.TextBox();
             this.confirmarTextBox = new System.Windows.Forms.TextBox();
             this.claveTextBox = new System.Windows.Forms.TextBox();
-            this.IngresoDateTimePicker = new System.Windows.Forms.DateTimePicker();
             this.RolComboBox = new System.Windows.Forms.ComboBox();
             this.NuevoButton = new System.Windows.Forms.Button();
             this.GuardarButton = new System.Windows.Forms.Button();
@@ -106,7 +104,7 @@ namespace RegistroConDetalleDesdeCero
             // RolLabel
             // 
             this.RolLabel.AutoSize = true;
-            this.RolLabel.Location = new System.Drawing.Point(694, 72);
+            this.RolLabel.Location = new System.Drawing.Point(661, 112);
             this.RolLabel.Name = "RolLabel";
             this.RolLabel.Size = new System.Drawing.Size(31, 20);
             this.RolLabel.TabIndex = 5;
@@ -115,26 +113,17 @@ namespace RegistroConDetalleDesdeCero
             // emailLabel
             // 
             this.emailLabel.AutoSize = true;
-            this.emailLabel.Location = new System.Drawing.Point(521, 117);
+            this.emailLabel.Location = new System.Drawing.Point(527, 162);
             this.emailLabel.Name = "emailLabel";
             this.emailLabel.Size = new System.Drawing.Size(46, 20);
             this.emailLabel.TabIndex = 6;
             this.emailLabel.Text = "Email";
             // 
-            // fechaIngresoLabel
-            // 
-            this.fechaIngresoLabel.AutoSize = true;
-            this.fechaIngresoLabel.Location = new System.Drawing.Point(521, 162);
-            this.fechaIngresoLabel.Name = "fechaIngresoLabel";
-            this.fechaIngresoLabel.Size = new System.Drawing.Size(121, 20);
-            this.fechaIngresoLabel.TabIndex = 7;
-            this.fechaIngresoLabel.Text = "Fecha de Ingreso";
-            // 
             // emailTextBox
             // 
-            this.emailTextBox.Location = new System.Drawing.Point(582, 114);
+            this.emailTextBox.Location = new System.Drawing.Point(588, 159);
             this.emailTextBox.Name = "emailTextBox";
-            this.emailTextBox.Size = new System.Drawing.Size(291, 27);
+            this.emailTextBox.Size = new System.Drawing.Size(252, 27);
             this.emailTextBox.TabIndex = 8;
             // 
             // aliasTextBox
@@ -167,17 +156,6 @@ namespace RegistroConDetalleDesdeCero
             this.claveTextBox.Size = new System.Drawing.Size(125, 27);
             this.claveTextBox.TabIndex = 13;
             // 
-            // IngresoDateTimePicker
-            // 
-            this.IngresoDateTimePicker.Cursor = System.Windows.Forms.Cursors.Default;
-            this.IngresoDateTimePicker.CustomFormat = "dd/MM/yyyy";
-            this.IngresoDateTimePicker.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.IngresoDateTimePicker.Location = new System.Drawing.Point(648, 159);
-            this.IngresoDateTimePicker.Name = "IngresoDateTimePicker";
-            this.IngresoDateTimePicker.Size = new System.Drawing.Size(225, 27);
-            this.IngresoDateTimePicker.TabIndex = 14;
-            this.IngresoDateTimePicker.ValueChanged += new System.EventHandler(this.IngresoDateTimePicker_ValueChanged);
-            // 
             // RolComboBox
             // 
             this.RolComboBox.BackColor = System.Drawing.SystemColors.ScrollBar;
@@ -185,7 +163,7 @@ namespace RegistroConDetalleDesdeCero
             this.RolComboBox.FormattingEnabled = true;
             this.RolComboBox.Items.AddRange(new object[] {
             "administrador"});
-            this.RolComboBox.Location = new System.Drawing.Point(731, 69);
+            this.RolComboBox.Location = new System.Drawing.Point(698, 109);
             this.RolComboBox.Name = "RolComboBox";
             this.RolComboBox.Size = new System.Drawing.Size(142, 28);
             this.RolComboBox.TabIndex = 15;
@@ -194,7 +172,7 @@ namespace RegistroConDetalleDesdeCero
             // 
             this.NuevoButton.Image = ((System.Drawing.Image)(resources.GetObject("NuevoButton.Image")));
             this.NuevoButton.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.NuevoButton.Location = new System.Drawing.Point(229, 206);
+            this.NuevoButton.Location = new System.Drawing.Point(217, 205);
             this.NuevoButton.Name = "NuevoButton";
             this.NuevoButton.Size = new System.Drawing.Size(90, 53);
             this.NuevoButton.TabIndex = 16;
@@ -207,7 +185,7 @@ namespace RegistroConDetalleDesdeCero
             // 
             this.GuardarButton.Image = ((System.Drawing.Image)(resources.GetObject("GuardarButton.Image")));
             this.GuardarButton.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.GuardarButton.Location = new System.Drawing.Point(414, 206);
+            this.GuardarButton.Location = new System.Drawing.Point(402, 205);
             this.GuardarButton.Name = "GuardarButton";
             this.GuardarButton.Size = new System.Drawing.Size(90, 53);
             this.GuardarButton.TabIndex = 17;
@@ -220,7 +198,7 @@ namespace RegistroConDetalleDesdeCero
             // 
             this.EliminarButton.Image = ((System.Drawing.Image)(resources.GetObject("EliminarButton.Image")));
             this.EliminarButton.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.EliminarButton.Location = new System.Drawing.Point(590, 206);
+            this.EliminarButton.Location = new System.Drawing.Point(578, 205);
             this.EliminarButton.Name = "EliminarButton";
             this.EliminarButton.Size = new System.Drawing.Size(90, 53);
             this.EliminarButton.TabIndex = 18;
@@ -246,7 +224,7 @@ namespace RegistroConDetalleDesdeCero
             // activoCheckBox
             // 
             this.activoCheckBox.AutoSize = true;
-            this.activoCheckBox.Location = new System.Drawing.Point(800, 24);
+            this.activoCheckBox.Location = new System.Drawing.Point(767, 68);
             this.activoCheckBox.Name = "activoCheckBox";
             this.activoCheckBox.Size = new System.Drawing.Size(73, 24);
             this.activoCheckBox.TabIndex = 20;
@@ -264,7 +242,7 @@ namespace RegistroConDetalleDesdeCero
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(891, 270);
+            this.ClientSize = new System.Drawing.Size(852, 270);
             this.Controls.Add(this.UsuarioIdNumericUpDown);
             this.Controls.Add(this.activoCheckBox);
             this.Controls.Add(this.BuscarButton);
@@ -272,13 +250,11 @@ namespace RegistroConDetalleDesdeCero
             this.Controls.Add(this.GuardarButton);
             this.Controls.Add(this.NuevoButton);
             this.Controls.Add(this.RolComboBox);
-            this.Controls.Add(this.IngresoDateTimePicker);
             this.Controls.Add(this.claveTextBox);
             this.Controls.Add(this.confirmarTextBox);
             this.Controls.Add(this.nombresTextBox);
             this.Controls.Add(this.aliasTextBox);
             this.Controls.Add(this.emailTextBox);
-            this.Controls.Add(this.fechaIngresoLabel);
             this.Controls.Add(this.emailLabel);
             this.Controls.Add(this.RolLabel);
             this.Controls.Add(this.ConfirmarLabel);
@@ -306,13 +282,11 @@ namespace RegistroConDetalleDesdeCero
         private System.Windows.Forms.Label ConfirmarLabel;
         private System.Windows.Forms.Label RolLabel;
         private System.Windows.Forms.Label emailLabel;
-        private System.Windows.Forms.Label fechaIngresoLabel;
         private System.Windows.Forms.TextBox emailTextBox;
         private System.Windows.Forms.TextBox aliasTextBox;
         private System.Windows.Forms.TextBox nombresTextBox;
         private System.Windows.Forms.TextBox confirmarTextBox;
         private System.Windows.Forms.TextBox claveTextBox;
-        private System.Windows.Forms.DateTimePicker IngresoDateTimePicker;
         private System.Windows.Forms.ComboBox RolComboBox;
         private System.Windows.Forms.Button NuevoButton;
         private System.Windows.Forms.Button GuardarButton;

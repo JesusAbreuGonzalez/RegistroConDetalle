@@ -28,7 +28,6 @@ namespace RegistroConDetalleDesdeCero
             claveTextBox.Clear();
             confirmarTextBox.Clear();
             emailTextBox.Clear();
-            IngresoDateTimePicker.Value = DateTime.Now;
             activoCheckBox.Checked = false;
         }
 
@@ -88,7 +87,7 @@ namespace RegistroConDetalleDesdeCero
             usuarios.Clave = claveTextBox.Text;
             usuarios.RolId = RolComboBox.SelectedIndex;
             usuarios.Email = emailTextBox.Text;
-            usuarios.FechaIngreso = IngresoDateTimePicker.Value;
+            usuarios.FechaIngreso = DateTime.Now;
             usuarios.Activo = activoCheckBox.Checked;
 
             return usuarios;
@@ -101,7 +100,6 @@ namespace RegistroConDetalleDesdeCero
             nombresTextBox.Text = usuarios.Nombres;
             RolComboBox.SelectedIndex = usuarios.RolId;
             emailTextBox.Text = usuarios.Email;
-            IngresoDateTimePicker.Value = usuarios.FechaIngreso;
             activoCheckBox.Checked = usuarios.Activo;
         }
 

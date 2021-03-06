@@ -51,10 +51,10 @@ namespace RegistroConDetalleDesdeCero.UI.Consultas
                 }
                 
             }
-           /* else
+            else
             {
                 lista = RolesBLL.GetList(r => true);
-            }*/
+            }
 
             //Si usarFecha se encuentra cortejado
             if (FiltroFechaCheckBox.Checked)
