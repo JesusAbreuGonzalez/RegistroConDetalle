@@ -14,6 +14,7 @@ namespace RegistroConDetalleDesdeCero.UI.Consultas
 {
     public partial class cUsuarios : Form
     {
+        List<Usuarios> lista = new List<Usuarios>();
         public cUsuarios()
         {
             InitializeComponent();
@@ -21,8 +22,7 @@ namespace RegistroConDetalleDesdeCero.UI.Consultas
 
         private void BuscarButton_Click(object sender, EventArgs e)
         {
-            var lista = new List<Usuarios>();
-            
+                        
             //Si algun radioButton se encuentra seleccionado
             if(FiltroActivoCheckBox.Checked)
             {
@@ -170,6 +170,17 @@ namespace RegistroConDetalleDesdeCero.UI.Consultas
             {
                 esActivoGroupBox.Enabled = false;
             }
+        }
+
+        private void ImprimirButton_Click(object sender, EventArgs e)
+        {
+            if (lista.Count == 0)
+            {
+                MessageBox.Show("No hay datos a imprimir");
+                return;
+            }
+            
+            
         }
     }
 }

@@ -1,4 +1,4 @@
-﻿<Project Sdk="Microsoft.NET.Sdk.WindowsDesktop">
+﻿<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
     <OutputType>WinExe</OutputType>
@@ -9,11 +9,12 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <PackageReference Include="microsoft.entityFrameWorkCore.SQLITE" Version="5.0.3" />
-    <PackageReference Include="microsoft.entityFrameWorkCore.Tools" Version="5.0.3">
+    <PackageReference Include="microsoft.entityFrameWorkCore.SQLITE" Version="5.0.4" />
+    <PackageReference Include="microsoft.entityFrameWorkCore.Tools" Version="5.0.4">
       <PrivateAssets>all</PrivateAssets>
       <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
     </PackageReference>
+    <PackageReference Include="Microsoft.ReportingServices.ReportViewerControl.Winforms" Version="150.1440.0" />
   </ItemGroup>
 
   <ItemGroup>
@@ -33,7 +34,6 @@
 
   <ItemGroup>
     <Folder Include="DATA\" />
-    <Folder Include="UI\Reportes\" />
   </ItemGroup>
 
   <ItemGroup>

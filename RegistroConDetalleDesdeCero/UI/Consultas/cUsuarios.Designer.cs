@@ -210,6 +210,7 @@ namespace RegistroConDetalleDesdeCero.UI.Consultas
             this.ImprimirButton.TabIndex = 13;
             this.ImprimirButton.Text = "Imprimir";
             this.ImprimirButton.UseVisualStyleBackColor = true;
+            this.ImprimirButton.Click += new System.EventHandler(this.ImprimirButton_Click);
             // 
             // UsuariosConsultaDataGridView
             // 
