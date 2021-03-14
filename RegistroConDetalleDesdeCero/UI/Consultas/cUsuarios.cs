@@ -51,6 +51,8 @@ namespace RegistroConDetalleDesdeCero.UI.Consultas
                                 break;
                         }
                     }
+                    else
+                        lista = UsuariosBLL.GetList(r => true);
                 }
                 else if (ActivosRadioButton.Checked)
                 {
@@ -77,6 +79,8 @@ namespace RegistroConDetalleDesdeCero.UI.Consultas
                                 break;
                         }
                     }
+                    else
+                        lista = UsuariosBLL.GetList(r => true && r.Activo);
                 }
                 else if (InactivosRadioButton.Checked)
                 {
@@ -102,7 +106,9 @@ namespace RegistroConDetalleDesdeCero.UI.Consultas
                             default:
                                 break;
                         }
-                    }                    
+                    }
+                    else
+                        lista = UsuariosBLL.GetList(r => true && !r.Activo);
                 }
             }
             else
