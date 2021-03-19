@@ -9,14 +9,14 @@ using RegistroConDetalleDesdeCero.DAL;
 namespace RegistroConDetalleDesdeCero.Migrations
 {
     [DbContext(typeof(Contexto))]
-    [Migration("20210306202126_Inicial")]
+    [Migration("20210319010811_Inicial")]
     partial class Inicial
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
-                .HasAnnotation("ProductVersion", "5.0.3");
+                .HasAnnotation("ProductVersion", "5.0.4");
 
             modelBuilder.Entity("RegistroConDetalleDesdeCero.Entidades.Permisos", b =>
                 {

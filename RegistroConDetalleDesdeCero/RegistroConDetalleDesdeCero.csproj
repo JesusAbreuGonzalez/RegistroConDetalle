@@ -33,16 +33,6 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="DATA\" />
-  </ItemGroup>
-
-  <ItemGroup>
-    <None Update="DATA\GestionUsuarios.Db">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </None>
-  </ItemGroup>
-
-  <ItemGroup>
     <Service Include="{c0c07587-41a7-46c8-8fbd-3f9c8ebe2ddc}" />
   </ItemGroup>
 

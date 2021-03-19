@@ -84,7 +84,7 @@ namespace RegistroConDetalleDesdeCero
             usuarios.UsuarioId = (int)UsuarioIdNumericUpDown.Value;
             usuarios.Nombres = nombresTextBox.Text;
             usuarios.Alias = aliasTextBox.Text;
-            usuarios.Clave = claveTextBox.Text;
+            usuarios.Clave = Utilitarios.GetSHA256(claveTextBox.Text);
             usuarios.RolId = RolComboBox.SelectedIndex;
             usuarios.Email = emailTextBox.Text;
             usuarios.FechaIngreso = DateTime.Now;

@@ -34,6 +34,27 @@ namespace RegistroConDetalleDesdeCero.BLL
             return encontrado;
         }
 
+        public static bool ExisteCorreo(string correo, string clave)
+        {
+            bool encontrado = false;
+            var contexto = new Contexto();
+
+            try
+            {
+                encontrado = contexto.Usuarios.Any(e => e.Email == correo && e.Clave == Utilitarios.GetSHA256(clave));
+            }
+            catch (Exception)
+            {
+
+                throw;
+            }
+            finally
+            {
+                contexto.Dispose();
+            }
+            return encontrado;
+        }
+
         private static bool Insertar(Usuarios usuarios)
         {
             bool paso = false;
@@ -132,6 +153,7 @@ namespace RegistroConDetalleDesdeCero.BLL
             }
             return usuarios;
         }
+
         public static List<Usuarios>GetUsuarios()
         {
             List<Usuarios> lista = new List<Usuarios>();
