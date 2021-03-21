@@ -22,14 +22,14 @@ namespace RegistroConDetalleDesdeCero.UI
 
         private void LoginButton_Click(object sender, EventArgs e)
         {
-            if (UsuariosBLL.ExisteCorreo(CorreoTextBox.Text, ClaveTextBox.Text))
+            if (UsuariosBLL.ExisteCorreo(NombreTextBox.Text, ClaveTextBox.Text))
             {
                 var ventana = new MainForm();
                 ventana.Show();
             }
             else
             {
-                LoginErrorProvider.SetError(CorreoTextBox, "El usuario o la contraseña ingresadas son erroneos");
+                LoginErrorProvider.SetError(NombreTextBox, "El usuario o la contraseña ingresadas son erroneos");
                 LoginErrorProvider.SetError(ClaveTextBox, "El usuario o la contraseña ingresadas son erroneos");
                 ClaveTextBox.Clear();
             }

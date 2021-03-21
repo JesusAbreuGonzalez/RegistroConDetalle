@@ -34,14 +34,14 @@ namespace RegistroConDetalleDesdeCero.BLL
             return encontrado;
         }
 
-        public static bool ExisteCorreo(string correo, string clave)
+        public static bool ExisteCorreo(string nombres, string clave)
         {
             bool encontrado = false;
             var contexto = new Contexto();
 
             try
             {
-                encontrado = contexto.Usuarios.Any(e => e.Email == correo && e.Clave == Utilitarios.GetSHA256(clave));
+                encontrado = contexto.Usuarios.Any(e => e.Nombres == nombres && e.Clave == Utilitarios.GetSHA256(clave));
             }
             catch (Exception)
             {
