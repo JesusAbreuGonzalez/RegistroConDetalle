@@ -156,7 +156,7 @@ namespace RegistroConDetalleDesdeCero.UI
             this.rolDetalle.Add(
                 new RolesDetalle(){
                     RolId = (int)RolIdNumericUpDown.Value,
-                    PermisoId = Convert.ToInt32(PermisoIdComboBox.Text),
+                    PermisoId = PermisoIdComboBox.SelectedIndex,
                     EsAsignado = EsAsignadoCheckBox.Checked
                 });
 
@@ -170,7 +170,7 @@ namespace RegistroConDetalleDesdeCero.UI
         {
 
             PermisoIdComboBox.DataSource = PermisosBLL.GetPermisos();
-            PermisoIdComboBox.DisplayMember = "PermisoId";
+            PermisoIdComboBox.DisplayMember = "Descripcion";
             PermisoIdComboBox.ValueMember = "PermisoId";
         }
 
