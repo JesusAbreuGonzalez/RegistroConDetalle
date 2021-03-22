@@ -52,6 +52,11 @@ namespace RegistroConDetalleDesdeCero.UI
                 RolErrorProvider.SetError(DescripcionTextBox, "Campo obligatorio");
                 paso = false;
             }
+            if (rolDetalle.Count == 0)
+            {
+                RolErrorProvider.SetError(RolesDataGridView, "Agregue algun permiso al detalle");
+                paso = false;
+            }
 
             return paso;
         }
@@ -80,7 +85,6 @@ namespace RegistroConDetalleDesdeCero.UI
         }
 
         //Este es el evento del boton Nuevo, sirve para limpiar los campos y errores
-
         private void NuevoRolButton_Click(object sender, EventArgs e)
         {
             Limpiar();
@@ -108,6 +112,7 @@ namespace RegistroConDetalleDesdeCero.UI
         //Este es el evento de boton guardar y sirve para almacenar o modificar los datos de los roles que se registren
         private void GuardarButton_Click(object sender, EventArgs e)
         {
+            
             Roles roles;
 
             if (!Validar())
@@ -141,6 +146,7 @@ namespace RegistroConDetalleDesdeCero.UI
                 RolErrorProvider.SetError(RolIdNumericUpDown, "Este Id no existe en la base de datos");
         }
 
+        //Este es el evento que agrega los elementos al dataGridView
         private void AgregarButton_Click_1(object sender, EventArgs e)
         {
             
