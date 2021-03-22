@@ -102,7 +102,8 @@ namespace RegistroConDetalleDesdeCero.BLL
             try
             {
                 var eliminar = contexto.Roles.Find(id);
-                contexto.Entry(eliminar).State = EntityState.Deleted;
+                if(eliminar != null)
+                    contexto.Entry(eliminar).State = EntityState.Deleted;
 
                 paso = (contexto.SaveChanges() > 0);
             }
