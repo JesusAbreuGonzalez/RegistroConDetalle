@@ -165,7 +165,7 @@ namespace RegistroConDetalleDesdeCero.UI
             EsAsignadoCheckBox.Checked = false;
         }
 
-        //Llenamos el ComboBox de permio ID, usando el metodo GetPermisos
+        //Llenamos el ComboBox de permiso Id, usando el método GetPermisos
         private void rRoles_Load_1(object sender, EventArgs e)
         {
 
