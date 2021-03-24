@@ -22,7 +22,7 @@ namespace RegistroConDetalleDesdeCero.UI
 
         private void LoginButton_Click(object sender, EventArgs e)
         {
-            if (UsuariosBLL.ExisteCorreo(NombreTextBox.Text, ClaveTextBox.Text))
+            if (UsuariosBLL.ExisteNombre(NombreTextBox.Text, ClaveTextBox.Text))
             {
                 var ventana = new MainForm();
                 ventana.Show();

@@ -34,7 +34,7 @@ namespace RegistroConDetalleDesdeCero.BLL
             return encontrado;
         }
 
-        public static bool ExisteCorreo(string nombres, string clave)
+        public static bool ExisteNombre(string nombres, string clave)
         {
             bool encontrado = false;
             var contexto = new Contexto();
